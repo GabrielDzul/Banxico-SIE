@@ -64,7 +64,7 @@ This will return a hash with the following information:
 }
 ```
 
-**Note** that according to [Banxico](https://www.banxico.org.mx/), the exchange rate for the saturday & sunday will be the same as the friday
+**Note** that according to [Banxico](https://www.banxico.org.mx/), the exchange rate for the saturday & sunday will be the same as the friday. In this case you can ignore the `fecha` field and use `dato` as the exchange rate.
 
 
 ## Contributing
