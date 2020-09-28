@@ -1,3 +1,4 @@
+require 'faraday'
 module Banxico
   module SIE
     def self.connection
@@ -6,7 +7,7 @@ module Banxico
         faraday.response :logger
         faraday.adapter Faraday.default_adapter
         faraday.use Faraday::Response::RaiseError
-        faraday.headers 'Bmx-Token': Banxico::SIE.key
+        faraday.headers['Bmx-Token'] = Banxico::SIE.key
       end
     end
   end
