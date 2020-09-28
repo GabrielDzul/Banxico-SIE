@@ -3,6 +3,8 @@ require "banxico/sie"
 require 'simplecov'
 require 'webmock/rspec'
 
+SimpleCov.start { add_filter '/spec/' }
+
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
   config.example_status_persistence_file_path = ".rspec_status"
