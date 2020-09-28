@@ -1,5 +1,5 @@
 module Banxico
-  module Sie
-    VERSION = "0.1.0"
+  module SIE
+    VERSION = "0.0.0"
   end
 end
