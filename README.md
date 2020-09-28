@@ -69,4 +69,4 @@ This will return a hash with the following information:
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[GabrielDzul]/banxico-sie.
+Bug reports and pull requests are welcome on GitHub at https://github.com/GabrielDzul/banxico-sie.
