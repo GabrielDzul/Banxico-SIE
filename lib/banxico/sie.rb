@@ -1,5 +1,6 @@
 require "banxico/sie/version"
 require "banxico/sie/connection"
+require "banxico/sie/client"
 require "banxico/sie/endpoints"
 require "banxico/sie/usd_exchange_rate"
 require "banxico/sie/errors/base_error"
