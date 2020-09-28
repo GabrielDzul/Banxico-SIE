@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    banxico-sie (0.0.0)
+    banxico-sie (1.0.0)
       faraday (~> 1.0.0)
 
 GEM
