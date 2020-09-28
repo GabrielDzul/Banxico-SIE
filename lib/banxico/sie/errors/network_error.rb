@@ -1,6 +1,6 @@
 module Banxico
   module SIE
-    module Erros
+    module Errors
       class NetworkError < BaseError; end
     end
   end

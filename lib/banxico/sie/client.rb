@@ -5,7 +5,7 @@ module Banxico
         response = Banxico::SIE.connection.get path, body, headers
         JSON.parse(response.body)
       rescue Faraday::ConnectionFailed, Faraday::TimeoutError
-        raise Banxico::SIE::Erros::NetworkError
+        raise Banxico::SIE::Errors::NetworkError
       end
     end
   end

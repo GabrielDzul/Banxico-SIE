@@ -1,6 +1,6 @@
 module Banxico
   module SIE
-    module Erros
+    module Errors
       class BaseError < StandardError
         attr_accessor :code, :detail
 
