@@ -15,7 +15,7 @@ RSpec.configure do |config|
   end
 
   config.before(:all) do
-    Banxico::SIE.base_uri = 'https://www.banxico.org.mx/SieAPIRest/service/v1'
+    Banxico::SIE.base_uri = 'https://www.banxico.org.mx/SieAPIRest/service/v1/'
     Banxico::SIE.key = 'a93b47366b3b6a6d860717b506272d5806a651c1ffdd823851cf91a3ea4ccea3'
   end
 end
