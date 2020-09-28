@@ -1,8 +1,10 @@
 # Banxico::Sie
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/banxico/sie`. To experiment with that code, run `bin/console` for an interactive prompt.
+[![GitHub version](https://badge.fury.io/gh/gabrieldzul%2FBanxico-rails.svg)](https://badge.fury.io/gh/gabrieldzul%2FBanxico-rails)
 
-TODO: Delete this and the text above, and describe your gem
+Banxico-SIE offers an interface to consume the [Banxico API](https://www.banxico.org.mx/SieAPIRest/service/v1/)
+
+This project is not endorsed in any way by the Mexican government
 
 ## Installation
 
@@ -32,4 +34,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/banxico-sie.
+Bug reports and pull requests are welcome on GitHub at https://github.com/[GabrielDzul]/banxico-sie.
