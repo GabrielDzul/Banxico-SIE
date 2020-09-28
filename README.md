@@ -1,6 +1,6 @@
-# Banxico::Sie
+# Banxico::SIE
 
-[![GitHub version](https://badge.fury.io/gh/gabrieldzul%2FBanxico-rails.svg)](https://badge.fury.io/gh/gabrieldzul%2FBanxico-rails)
+[![GitHub version](https://badge.fury.io/gh/GABRIELDZUL%2FBANXICO-SIE.svg)](https://badge.fury.io/gh/GABRIELDZUL%2FBANXICO-SIE)
 
 Banxico-SIE offers an interface to consume the [Banxico API](https://www.banxico.org.mx/SieAPIRest/service/v1/)
 
@@ -24,13 +24,48 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Add a new initializer and add the following lines
+```ruby
+require "banxico/sie"
 
-## Development
+Banxico::SIE.config do |c|
+  c.base_uri = "https://www.banxico.org.mx/SieAPIRest/service/v1/"
+  c.key = "your_key"
+end
+```
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+You can [generate a key here](https://www.banxico.org.mx/SieAPIRest/service/v1/token)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### Querying the current USD exchange rate
+
+To get the current (daily) exchange rate call `usd_exchange_rate`
+
+```ruby
+Banxico::SIE.usd_exchange_rate
+```
+
+This will return a hash with the following information:
+```ruby
+{
+    "bmx" =>  {
+      "series" => [
+        {
+          "idSerie" => "SF43718",
+          "titulo" =>"Tipo de cambio Pesos por d\u00F3lar E.U.A. Tipo d   cambio para solventar                 obligaciones            denominadas en moneda extranjera Fecha de determinaci\u00F3n (FIX)",
+          "datos" =>  [
+            {
+              "fecha" => "28/09/2020",
+              "dato" => "22.4573"
+              }
+          ]
+        }
+      ]
+    }
+}
+```
+
+**Note** that according to [Banxico](https://www.banxico.org.mx/), the exchange rate for the saturday & sunday will be the same as the friday
+
 
 ## Contributing
 
