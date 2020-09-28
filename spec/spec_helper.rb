@@ -1,5 +1,7 @@
 require "bundler/setup"
 require "banxico/sie"
+require 'simplecov'
+require 'webmock/rspec'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -10,5 +12,10 @@ RSpec.configure do |config|
 
   config.expect_with :rspec do |c|
     c.syntax = :expect
+  end
+
+  config.before(:all) do
+    Banxico::SIE.base_uri = 'https://www.banxico.org.mx/SieAPIRest/service/v1'
+    Banxico::SIE.key = 'a93b47366b3b6a6d860717b506272d5806a651c1ffdd823851cf91a3ea4ccea3'
   end
 end
